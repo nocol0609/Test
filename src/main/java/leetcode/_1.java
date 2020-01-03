@@ -19,7 +19,7 @@ import java.util.HashMap;
  * 所以返回 [0, 1]
  *
  */
-public class _1 {
+ class _1 {
     public static void main(String[] args) {
         int[] nums={3,2,4};
         int target=6;

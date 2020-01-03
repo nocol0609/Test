@@ -6,9 +6,15 @@ package link.singlelink;
  * @author Nocol 上午10:41:22
  */
 public class Node {
-	// 数据域
+
+	/**
+	 * 数据域
+	 */
 	public long data;
-	// 指针域
+
+	/**
+	 * 指针域
+	 */
 	public Node next;
 
 	public Node(long value) {
