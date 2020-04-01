@@ -1,5 +1,6 @@
 package leetcode;
 
+import javax.xml.ws.spi.http.HttpHandler;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -21,10 +22,26 @@ import java.util.HashMap;
  */
  class _1 {
     public static void main(String[] args) {
-        int[] nums={3,2,4};
-        int target=6;
-        int[] ints = twoSum(nums, target);
+        int[] nums={2, 7, 11, 15};
+        int target=9;
+        //int[] ints = twoSum(nums, target);
+        int[] ints = twoSum2(nums, target);
         System.out.println(Arrays.toString(ints));
+    }
+
+    private static int[] twoSum2(int[] nums, int target) {
+        HashMap<Integer,Integer> map=new HashMap<>();
+        int[] result=new int[2];
+        for (int i=0;i<nums.length;i++){
+            int numTwo=target-nums[i];
+            if(map.get(numTwo)!=null){
+                result[0]=map.get(numTwo);
+                result[1]=i;
+            }else {
+                map.put(nums[i],i);
+            }
+        }
+        return result;
     }
 
     private static int[] twoSum(int[] nums, int target) {
@@ -41,4 +58,6 @@ import java.util.HashMap;
         }
         return result;
     }
+
+
 }

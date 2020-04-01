@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author ：liuxp
  * @date ：Created in 2020/1/3 9:56
- * @description ：
+ * @description ：两数相加
  *
  * 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
  *
@@ -29,27 +29,50 @@ class _2 {
         ListNode firstNode=new ListNode(2);
         firstNode.next=new ListNode(4);
         firstNode.next.next=new ListNode(3);
+
         ListNode secondeNode=new ListNode(5);
         secondeNode.next=new ListNode(6);
         secondeNode.next.next=new ListNode(4);
-        ListNode listNode = addTwoNumbers(firstNode, secondeNode);
-        printListNode(listNode);
+
+//        System.out.println(firstNode.val);
+//        System.out.println(secondeNode.val);
+
+
+//        printListNode(firstNode);
+//        printListNode(secondeNode);
+//        ListNode listNode = addTwoNumbers(firstNode, secondeNode);
+//        printListNode(listNode);
+
+        System.out.println(21%10);
+        System.out.println(21/10);
+
+
     }
 
     private static ListNode addTwoNumbers(ListNode node1, ListNode node2) {
+
+        //(2 -> 4 -> 3) + (5 -> 6 -> 4)
+
         List<ListNode> nodeList=new ArrayList<>();
         nodeList.add(node1);
         nodeList.add(node2);
-        String num=getSum(nodeList).toString(); //807
-        char[] chars = num.toCharArray();
-        ListNode node;
-        ListNode tempMode;
-        for (int i=chars.length-1;i>=0;i++){
-            node=new ListNode(chars[i]);
-            tempMode=node;
-            node.next=new ListNode(chars[i]);
+        //807
+        String num=getSum(nodeList).toString();
+
+        int[] arr = new int[num.length()];
+        for (int i = 0; i < num.length(); i++) {
+            //substring是找出包含起始位置，不包含结束位置，到结束位置的前一位的子串
+            arr[i] = Integer.parseInt(num.substring(i, i + 1));
         }
-        return null;
+
+        ListNode node=null;
+        ListNode tempNode;
+        for (int i=arr.length-1;i>=0;i--){
+            node=new ListNode(arr[i]);
+            tempNode=new ListNode(arr[i-1]);
+            node.next=tempNode;
+        }
+        return node;
     }
 
     private static Integer getSum(List<ListNode> nodeList) {
