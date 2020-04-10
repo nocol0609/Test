@@ -13,8 +13,17 @@ public class MyLinkListTest {
 		linkList.addFirst(1);
 		linkList.addFirst(6);
 		linkList.addFirst(2);
-
 		linkList.display();
+
+		MyLinkList linkList2 = new MyLinkList();
+		linkList2.addNode(1);
+		linkList2.addNode(2);
+		linkList2.addNode(6);
+		linkList2.addNode(3);
+		linkList2.addNode(4);
+		linkList2.addNode(5);
+		linkList2.addNode(6);
+		linkList2.display();
 
 		linkList.delete(1);
 		linkList.display();

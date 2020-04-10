@@ -34,64 +34,45 @@ class _2 {
         secondeNode.next=new ListNode(6);
         secondeNode.next.next=new ListNode(4);
 
-//        System.out.println(firstNode.val);
-//        System.out.println(secondeNode.val);
-
-
-//        printListNode(firstNode);
-//        printListNode(secondeNode);
-//        ListNode listNode = addTwoNumbers(firstNode, secondeNode);
-//        printListNode(listNode);
-
-        System.out.println(21%10);
-        System.out.println(21/10);
-
+        printListNode(firstNode);
+        printListNode(secondeNode);
+        ListNode listNode = addTwoNumbers(firstNode, secondeNode);
+        printListNode(listNode);
 
     }
 
     private static ListNode addTwoNumbers(ListNode node1, ListNode node2) {
+        //2 -> 4 -> 3
+        //5 -> 6 -> 4
+        int carry=0;
+        ListNode current=new ListNode(0);
+        ListNode tempHead=current;
+        while (node1!=null || node2!=null){
+            int num1=node1.val;
+            int num2=node2.val;
+            int result=num1+num2+carry;
+            carry=result/10;
+            ListNode next=new ListNode(result%10);
+            current.next=next;
 
-        //(2 -> 4 -> 3) + (5 -> 6 -> 4)
+            //继续往下移动
+            current=current.next;
 
-        List<ListNode> nodeList=new ArrayList<>();
-        nodeList.add(node1);
-        nodeList.add(node2);
-        //807
-        String num=getSum(nodeList).toString();
-
-        int[] arr = new int[num.length()];
-        for (int i = 0; i < num.length(); i++) {
-            //substring是找出包含起始位置，不包含结束位置，到结束位置的前一位的子串
-            arr[i] = Integer.parseInt(num.substring(i, i + 1));
+            //两个链表继续往下移动
+            if(null!=node1){
+                node1=node1.next;
+            }
+            if(null!=node2){
+                node2=node2.next;
+            }
         }
-
-        ListNode node=null;
-        ListNode tempNode;
-        for (int i=arr.length-1;i>=0;i--){
-            node=new ListNode(arr[i]);
-            tempNode=new ListNode(arr[i-1]);
-            node.next=tempNode;
+        //若最后的链表相加还需要进位，则需要创建新节点
+        if(carry>0){
+            current.next=new ListNode(carry);
         }
-        return node;
+        return tempHead.next;
     }
 
-    private static Integer getSum(List<ListNode> nodeList) {
-        Integer sum=0;
-        for (ListNode node:nodeList){
-            List<Integer> list=new ArrayList<>();
-            ListNode tempNode=node;
-            while (tempNode!=null){
-                list.add(tempNode.val);
-                tempNode=tempNode.next;
-            }
-            StringBuilder builder=new StringBuilder();
-            for(int i=list.size()-1;i>=0;i--){
-                builder.append(list.get(i));
-            }
-            sum+=Integer.parseInt(builder.toString());
-        }
-        return sum;
-    }
 
     private static void printListNode(ListNode listNode) {
         if (listNode != null) {

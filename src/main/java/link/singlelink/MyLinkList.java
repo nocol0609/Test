@@ -16,17 +16,39 @@ public class MyLinkList {
 		first = null;
 	}
 
+
 	/**
 	 * 插入一个节点，在头结点前插入
 	 */
-	public void addFirst(long value) {
+	public Node addFirst(long value) {
 		// 创建要插入的节点
 		Node node = new Node(value);
 		// 使插入的节点的指针域指向头节点
 		node.next = first;
 		// 此时头节点变成了刚插入的节点
 		first = node;
+		return node;
 	}
+
+
+	/**
+	 * 新增节点，尾部插入
+	 */
+	public void addNode(long value){
+		Node newNode=new Node(value);
+		if(first==null){
+			first=newNode;
+			return;
+		}
+		Node temp=first;
+		//遍历到尾结点
+		while (temp.next!=null){
+			temp=temp.next;
+		}
+		temp.next=newNode;
+	}
+
+
 
 	/**
 	 * 删除头节点

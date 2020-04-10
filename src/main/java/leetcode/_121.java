@@ -33,7 +33,6 @@ public class _121 {
         if(prices.length<2){
             return result;
         }
-
         int min=prices[0];
         for(int i=1;i<prices.length;i++){
             if(prices[i]-min>0){
