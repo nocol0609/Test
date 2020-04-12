@@ -1,4 +1,4 @@
-package leetcode.commo;
+package leetcode.common;
 
 import leetcode.temp.ListNode;
 

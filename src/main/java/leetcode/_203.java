@@ -1,8 +1,7 @@
 package leetcode;
 
-import leetcode.commo.ListNodeUtils;
+import leetcode.common.ListNodeUtils;
 import leetcode.temp.ListNode;
-import leetcode.temp.TestLinkList;
 
 /**
  * @author £ºliuxp
