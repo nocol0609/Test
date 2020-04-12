@@ -1,5 +1,6 @@
 package leetcode;
 
+import leetcode.commo.ListNodeUtils;
 import leetcode.temp.ListNode;
 import leetcode.temp.TestLinkList;
 
@@ -35,11 +36,12 @@ public class _203 {
 //        linkList.addNode(5);
 //        linkList.addNode(6);
 //        linkList.display();
-        printListNode(firstNode);
+
+        ListNodeUtils.printListNode(firstNode);
 
         ListNode resultNode = removeElements(firstNode, val);
 
-        printListNode(resultNode);
+        ListNodeUtils.printListNode(resultNode);
 
     }
 
@@ -58,14 +60,4 @@ public class _203 {
 
     }
 
-    private static void printListNode(ListNode listNode) {
-        if (listNode != null) {
-            ListNode temp = listNode;
-            while (temp != null) {
-                System.out.println(temp.val);
-                temp = temp.next;
-            }
-        }
-        System.out.println("-------------");
-    }
 }

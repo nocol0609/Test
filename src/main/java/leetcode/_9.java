@@ -22,7 +22,7 @@ package leetcode;
 public class _9 {
 
     public static void main(String[] args) {
-        int num=121;
+        int num=1221;
         boolean palindrome = isPalindrome(num);
         System.out.println(">>>>"+palindrome);
     }
@@ -39,6 +39,7 @@ public class _9 {
             reverseNum = reverseNum * 10 + x %10;
             x = x/ 10;
         }
+        //翻转之后与原数对比
         if(originX == reverseNum){
             flag=true;
         }

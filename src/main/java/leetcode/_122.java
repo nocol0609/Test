@@ -34,7 +34,14 @@ package leetcode;
  */
 public class _122 {
 
-    public int maxProfit(int[] prices) {
+    public static void main(String[] args) {
+        //int[] prices=new int[]{7,6,4,3,1};
+        int[] prices=new int[]{7,1,5,3,6,4};
+        int result = maxProfit(prices);
+        System.out.println(">>>>>"+result);
+    }
+
+    public static int maxProfit(int[] prices) {
         int sum=0;
         for(int i=1;i<=prices.length-1;i++){
             if(prices[i]-prices[i-1]>0){

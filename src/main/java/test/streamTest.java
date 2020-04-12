@@ -18,14 +18,22 @@ public class streamTest {
 //        stringList.add("pzw");
 //        stringList.stream().forEach(s->System.out.println(s));
 
-        int a = 13 / 5;
-        int b = 13 % 5;
-        int c = 5 / 13;
-        int d = 5 % 13;
-        int e = 13 / -5;
-        int f = -13 / 5;
-        int h = -13 % 5;
-        int j = 13 % -5;
+        int a = 19 / 7; //2
+        int b = 19 % 7; //5
+        int c = 7 / 19; //0
+        int d = 7 % 18; //6
+        int e = 19 / -7; //-2
+        int f = -19 / 7; //-2
+        int h = -19 % 7; //-5
+        int j = 19 % -7; //5
+
+        int d1 = 1 % 18;
+        int d2 = 2 % 18;
+        int d3 = 3 % 18;
+        int d4 = 4 % 18;
+        System.out.println(d1 + "£¬" + d2+","+d3 + "£¬" + d4);
+
+
         System.out.println(a + "£¬" + b);
         System.out.println(c + "£¬" + d);
         System.out.println(e + "£¬" + f);
