@@ -27,19 +27,19 @@ public class _203 {
         firstNode.next.next.next.next.next=new ListNode(5);
         firstNode.next.next.next.next.next.next=new ListNode(6);
 
-        TestLinkList linkList=new TestLinkList();
-        linkList.addNode(1);
-        linkList.addNode(2);
-        linkList.addNode(3);
-        linkList.addNode(4);
-        linkList.addNode(5);
-        linkList.addNode(6);
-        linkList.display();
-//        printListNode(firstNode);
-//
-//        ListNode resultNode = removeElements(firstNode, val);
-//
-//        printListNode(resultNode);
+//        TestLinkList linkList=new TestLinkList();
+//        linkList.addNode(1);
+//        linkList.addNode(2);
+//        linkList.addNode(3);
+//        linkList.addNode(4);
+//        linkList.addNode(5);
+//        linkList.addNode(6);
+//        linkList.display();
+        printListNode(firstNode);
+
+        ListNode resultNode = removeElements(firstNode, val);
+
+        printListNode(resultNode);
 
     }
 

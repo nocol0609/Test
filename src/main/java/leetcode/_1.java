@@ -30,7 +30,7 @@ import java.util.Map;
     }
 
     private static int[] twoSum(int[] nums, int target) {
-        HashMap<Integer,Integer> map=new HashMap<>();
+        HashMap<Integer,Integer> map=new HashMap<Integer, Integer>();
         int[] result=new int[2];
         for (int i=0;i<nums.length;i++){
             int numTwo=target-nums[i];
@@ -45,7 +45,7 @@ import java.util.Map;
     }
 
     private static int[] twoSum2(int[] nums, int target) {
-        Map<Integer,Integer> map=new HashMap<>();
+        Map<Integer,Integer> map=new HashMap<Integer, Integer>();
         int[] result=new int[2];
         for(int i=0;i<nums.length;i++){
             int numTwo=target-nums[i];
