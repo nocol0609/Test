@@ -1,6 +1,7 @@
 package leetcode.link;
 
 import leetcode.temp.ListNode;
+import leetcode.utis.ListNodeUtils;
 
 /**
  * @author ：liuxp
@@ -31,10 +32,10 @@ class _2 {
         secondeNode.next=new ListNode(6);
         secondeNode.next.next=new ListNode(4);
 
-        printListNode(firstNode);
-        printListNode(secondeNode);
+        ListNodeUtils.printListNode(firstNode);
+        ListNodeUtils.printListNode(secondeNode);
         ListNode listNode = addTwoNumbers(firstNode, secondeNode);
-        printListNode(listNode);
+        ListNodeUtils.printListNode(listNode);
 
     }
 
@@ -68,17 +69,5 @@ class _2 {
             current.next=new ListNode(carry);
         }
         return tempHead.next;
-    }
-
-
-    private static void printListNode(ListNode listNode) {
-        if (listNode != null) {
-            ListNode temp = listNode;
-            while (temp != null) {
-                System.out.println(temp.val);
-                temp = temp.next;
-            }
-        }
-        System.out.println("-------------");
     }
 }
