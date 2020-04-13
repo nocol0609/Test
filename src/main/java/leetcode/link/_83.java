@@ -1,6 +1,6 @@
-package leetcode;
+package leetcode.link;
 
-import leetcode.common.ListNodeUtils;
+import leetcode.utis.ListNodeUtils;
 import leetcode.temp.ListNode;
 
 /**

@@ -1,6 +1,6 @@
-package leetcode;
+package leetcode.array;
 
-import leetcode.common.ArrayUtils;
+import leetcode.utis.ArrayUtils;
 
 /**
  * @author liuxp
@@ -35,7 +35,6 @@ public class _283 {
         }
         //0,1,0,3,12
         //1,3,12,0,0
-        int originLength=nums.length;
         int slow=0;
         for(int fast=0;fast<nums.length;fast++){
             if(nums[fast]!=0){
@@ -43,5 +42,11 @@ public class _283 {
                 slow++;
             }
         }
+
+        //ฒน0
+        for(int i=slow;i<nums.length;i++){
+            nums[i]=0;
+        }
+
     }
 }

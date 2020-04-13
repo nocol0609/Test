@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.math;
 
 /**
  * @author liuxp
@@ -11,7 +11,7 @@ package leetcode;
  *
  * 输入: 121
  * 输出: true
- * 示例?2:
+ * 示例 2:
  *
  * 输入: -121
  * 输出: false

@@ -1,9 +1,6 @@
-package leetcode;
+package leetcode.link;
 
 import leetcode.temp.ListNode;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author ：liuxp

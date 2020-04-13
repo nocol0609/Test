@@ -1,6 +1,6 @@
-package leetcode;
+package leetcode.link;
 
-import leetcode.common.ListNodeUtils;
+import leetcode.utis.ListNodeUtils;
 import leetcode.temp.ListNode;
 
 /**
@@ -26,15 +26,6 @@ public class _203 {
         firstNode.next.next.next.next=new ListNode(4);
         firstNode.next.next.next.next.next=new ListNode(5);
         firstNode.next.next.next.next.next.next=new ListNode(6);
-
-//        TestLinkList linkList=new TestLinkList();
-//        linkList.addNode(1);
-//        linkList.addNode(2);
-//        linkList.addNode(3);
-//        linkList.addNode(4);
-//        linkList.addNode(5);
-//        linkList.addNode(6);
-//        linkList.display();
 
         ListNodeUtils.printListNode(firstNode);
 

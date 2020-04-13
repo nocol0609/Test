@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.array;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -25,7 +25,7 @@ import java.util.Map;
         int[] nums={2, 7, 11, 15};
         int target=9;
         //int[] ints = twoSum(nums, target);
-        int[] ints = twoSum2(nums, target);
+        int[] ints = twoSum(nums, target);
         System.out.println(Arrays.toString(ints));
     }
 
@@ -43,21 +43,4 @@ import java.util.Map;
         }
         return result;
     }
-
-    private static int[] twoSum2(int[] nums, int target) {
-        Map<Integer,Integer> map=new HashMap<Integer, Integer>();
-        int[] result=new int[2];
-        for(int i=0;i<nums.length;i++){
-            int numTwo=target-nums[i];
-            if(null!=map.get(numTwo)){
-                result[0]=map.get(numTwo);
-                result[1]=i;
-            }else {
-                map.put(nums[i],i);
-            }
-        }
-        return result;
-    }
-
-
 }

@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.link;
 
 import leetcode.temp.ListNode;
 
