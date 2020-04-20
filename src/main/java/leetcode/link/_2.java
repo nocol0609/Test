@@ -46,8 +46,8 @@ class _2 {
         ListNode current=new ListNode(0);
         ListNode tempHead=current;
         while (node1!=null || node2!=null){
-            int num1=node1.val;
-            int num2=node2.val;
+            int num1=(node1==null)?0:node1.val;
+            int num2=(node2==null)?0:node2.val;
             int result=num1+num2+carry;
             carry=result/10;
             ListNode next=new ListNode(result%10);
